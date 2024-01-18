@@ -1,3 +1,10 @@
+$(document).ready(function() {
+    $('.upload-btn-wrapper input[type=file]').change(function() {
+        var filename = $(this).val().split('\\').pop();
+        $('.upload-btn-wrapper .btn').html(filename);
+    });
+});
+
 function analyzeAudio() {
     const audioInput = document.getElementById('audioInput');
     const resultDiv = document.getElementById('result');
